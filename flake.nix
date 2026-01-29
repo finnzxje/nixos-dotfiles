@@ -26,7 +26,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.finnzxje = import ./home.nix;
+                users.finnzxje = import ./home;
                 backupFileExtension = "backup";
               };
             }
