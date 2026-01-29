@@ -54,6 +54,7 @@ in
     gcc
     nodejs
     yarn
+
     tree-sitter
     bash-language-server
     tinymist
@@ -61,10 +62,13 @@ in
     yaml-language-server
     kdlfmt
     lua-language-server
+    stylua
     typescript-language-server
     ncdu
 
     nixfmt
+    codex
+    lazygit
   ];
 
 }
