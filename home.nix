@@ -46,15 +46,34 @@ in
     enable = true;
   };
 
+  programs.starship = {
+    enable = true;
+    settings = {
+      add_newline = false;
+      aws.disabled = true;
+      gcloud.disabled = true;
+      link_break.disabled = true;
+    };
+  };
+
   home.packages = with pkgs; [
-    ripgrep
+    neofetch
+    # archive
+    zip
+    xz
     unzip
+
+    # utils
+
+    ripgrep
     fd
     wget
     gcc
     nodejs
     yarn
+    eza
 
+    # neovim migration
     tree-sitter
     bash-language-server
     tinymist
@@ -65,10 +84,17 @@ in
     stylua
     typescript-language-server
     ncdu
-
     nixfmt
+
+    # misc
     codex
     lazygit
+
+    # productivity
+    btop
+
+    # networking
+    dnsutils
   ];
 
 }

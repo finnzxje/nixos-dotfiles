@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 
@@ -36,13 +37,14 @@
       PermitRootLogin = "no";
     };
   };
-
   # zsh
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     autosuggestions.enable = true;
+    oh-my-zsh.enable = true;
+
   };
 
   users.users.finnzxje = {
