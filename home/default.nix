@@ -84,7 +84,7 @@ in
 
   programs.git = {
     enable = true;
-    settings.user.name = "finzxje";
+    settings.user.name = "finnzxje";
     settings.user.email = "minthinh0900@gmail.com";
   };
 
