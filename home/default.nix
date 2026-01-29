@@ -85,7 +85,7 @@ in
   programs.git = {
     enable = true;
     settings.user.name = "finnzxje";
-    settings.user.email = "minthinh0900@gmail.com";
+    settings.user.email = "minhthinh0900@gmail.com";
   };
 
   # yazi configuration
