@@ -1,0 +1,25 @@
+-- return {
+--   "catgoose/nvim-colorizer.lua",
+--   event = "BufReadPre",
+--   opts = {           -- set to setup table
+--     user_default_options = {
+--       rgb_fn = true, -- CSS rgb() and rgba() functions
+--       hsl_fn = true, -- CSS hsl() and hsla() functions
+--     },
+--
+--   },
+-- }
+return {
+  -- "eero-lehtinen/oklch-color-picker.nvim",
+  -- event = "VeryLazy",
+  -- version = "*",
+  -- keys = {
+  --   -- One handed keymap recommended, you will be using the mouse
+  --   {
+  --     "<leader>v",
+  --     function() require("oklch-color-picker").pick_under_cursor() end,
+  --     desc = "Color pick under cursor",
+  --   },
+  -- },
+  -- opts = {},
+}
