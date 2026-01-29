@@ -3,12 +3,14 @@
   lib,
   pkgs,
   inputs,
+  username,
   ...
 }:
 
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/system.nix
   ];
 
   boot.loader = {
@@ -24,8 +26,7 @@
 
   networking.hostName = "shoukei";
   networking.networkmanager.enable = true;
-
-  time.timeZone = "Asia/Ho_Chi_Minh";
+  # networking.wireless.enable = true;
 
   # services.xserver.enable = true;
   programs.niri.enable = true;
@@ -35,57 +36,8 @@
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
     command = "niri";
-    user = "finnzxje";
+    user = "${username}";
   };
-
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = true; # change this on real machine
-      PermitRootLogin = "no";
-    };
-  };
-  # zsh
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestions.enable = true;
-    oh-my-zsh.enable = true;
-  };
-
-  users.users.finnzxje = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
-    shell = pkgs.zsh;
-  };
-
-  programs.firefox.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    curl
-    git
-    kitty
-
-    go
-    nixd
-  ];
-
-  # nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 
   system.stateVersion = "25.11";
 }

@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  username,
+  ...
+}:
 
 let
   dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
@@ -6,8 +11,8 @@ let
 in
 
 {
-  home.username = "finnzxje";
-  home.homeDirectory = "/home/finnzxje";
+  home.username = "${username}";
+  home.homeDirectory = "/home/${username}";
   home.stateVersion = "25.11";
   programs.bash = {
     enable = true;
@@ -58,15 +63,10 @@ in
 
   home.packages = with pkgs; [
     neofetch
-    # archive
-    zip
-    xz
-    unzip
 
     # utils
 
     ripgrep
-    fd
     wget
     gcc
     nodejs
@@ -83,7 +83,6 @@ in
     lua-language-server
     stylua
     typescript-language-server
-    ncdu
     nixfmt
 
     # misc
