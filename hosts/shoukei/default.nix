@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos-btw";
+  networking.hostName = "shoukei";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Ho_Chi_Minh";
@@ -44,7 +44,6 @@
     syntaxHighlighting.enable = true;
     autosuggestions.enable = true;
     oh-my-zsh.enable = true;
-
   };
 
   users.users.finnzxje = {
