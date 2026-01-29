@@ -12,8 +12,12 @@
       "networkmanager"
       "docker"
     ];
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
   };
+  programs.zsh = {
+    enable = true;
+  };
+  users.defaultUserShell = pkgs.zsh;
 
   nix.settings.trusted-users = [
     "root"
@@ -89,14 +93,6 @@
     };
     openFirewall = true;
   };
-  # zsh
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestions.enable = true;
-    oh-my-zsh.enable = true;
-  };
 
   programs.firefox.enable = true;
 
@@ -109,7 +105,6 @@
 
     libgcc
 
-    kitty
     go
     nixd
 
