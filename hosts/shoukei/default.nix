@@ -32,11 +32,18 @@
   programs.niri.enable = true;
   programs.xwayland.enable = true;
 
+  # environment.systemPackages = with pkgs; [
+  #   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+  #   # ... maybe other stuff
+  # ];
+
   services.displayManager.ly.enable = false;
   services.greetd.enable = true;
   services.greetd.settings.default_session = {
-    command = "niri";
-    user = "${username}";
+    # command = "niri-session";
+    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions ${pkgs.niri}/share/wayland-sessions --cmd niri-session";
+    # user = "${username}";
+    user = "greeter";
   };
 
   system.stateVersion = "25.11";

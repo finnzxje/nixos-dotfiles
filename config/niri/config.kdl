@@ -47,8 +47,8 @@ input {
 // by running `niri msg outputs` while inside a niri instance.
 // https://yalter.github.io/niri/Configuration:-Outputs
 output "Virtual-1" {
-    mode "2560x1080"
-    // mode "1920x1080"
+    // mode "2560x1080"
+    mode "1920x1080"
     scale 1
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
     transform "normal"
@@ -102,7 +102,7 @@ layout {
 
     }
 }
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 hotkey-overlay {
     skip-at-startup
@@ -587,4 +587,7 @@ binds {
         power-off-monitors
     }
 }
+// spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia-shell"
+spawn-at-startup "fcitx5"
 

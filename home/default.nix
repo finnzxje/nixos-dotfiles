@@ -82,11 +82,15 @@ in
     tinymist
     gopls
     yaml-language-server
+    yamlfmt
+    prettier
     kdlfmt
     lua-language-server
     stylua
     typescript-language-server
     nixfmt
+    go
+    nixd
 
     # misc
     codex
@@ -99,6 +103,7 @@ in
     dnsutils
 
     kitty
+    nil
   ];
 
 }

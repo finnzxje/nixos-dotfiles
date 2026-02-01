@@ -2,6 +2,7 @@
   pkgs,
   lib,
   username,
+  inputs,
   ...
 }:
 {
@@ -51,6 +52,25 @@
     LC_PAPER = "vi_VN";
     LC_TELEPHONE = "vi_VN";
     LC_TIME = "en_US.UTF-8";
+  };
+  # Type vietnamese
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5 = {
+      addons = with pkgs; [ fcitx5-bamboo ];
+      waylandFrontend = true;
+    };
+
+  };
+
+  environment.sessionVariables = {
+    # GTK_IM_MODULE = "fcitx";
+    # QT_IM_MODULE = "fcitx";
+    # QT4_IM_MODULE = "fcitx";
+    CLUTTER_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
   };
 
   fonts = {
@@ -105,9 +125,6 @@
 
     libgcc
 
-    go
-    nixd
-
     # system monitoring
     procs # a modern ps
     btop
@@ -129,6 +146,9 @@
     file
     which
     tree
+
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    tuigreet
 
   ];
 
