@@ -26,16 +26,32 @@
 
   networking.hostName = "shoukei";
   networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "none";
   networking.wireless.enable = true;
+  networking.nameservers = [
+    "1.1.1.1"
+    "1.0.0.1"
+    "8.8.8.8"
+  ];
 
-  # services.xserver.enable = true;
+  services.cloudflare-warp = {
+    enable = true;
+    openFirewall = true;
+  };
+  # services.zapret.enable = true;
+  # services.resolved.enable = true;
+
+  # services.resolved.settings.Resolve.DNS = [
+  #   "1.1.1.1"
+  #   "1.0.0.1"
+  #   "8.8.8.8"
+  #   "8.8.4.4"
+  #
+  # ];
+  # services.resolved.settings.Resolve.DNSOverTLS = true;
+
   programs.niri.enable = true;
   programs.xwayland.enable = true;
-
-  # environment.systemPackages = with pkgs; [
-  #   inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-  #   # ... maybe other stuff
-  # ];
 
   services.displayManager.ly.enable = false;
   services.greetd.enable = true;
