@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 {
-  programs.anki = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    anki
+    qbittorrent
+  ];
 }
