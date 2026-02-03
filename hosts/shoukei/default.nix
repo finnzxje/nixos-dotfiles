@@ -26,7 +26,7 @@
 
   networking.hostName = "shoukei";
   networking.networkmanager.enable = true;
-  # networking.wireless.enable = true;
+  networking.wireless.enable = true;
 
   # services.xserver.enable = true;
   programs.niri.enable = true;
@@ -44,6 +44,16 @@
     command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions ${pkgs.niri}/share/wayland-sessions --cmd niri-session";
     # user = "${username}";
     user = "greeter";
+  };
+
+  # mount window partition
+  fileSystems."/mnt/windows" = {
+    device = "/dev/disk/by-uuid/E640A27040A246E1";
+    fsType = "ntfs3";
+    options = [
+      "rw"
+      "nofail"
+    ];
   };
 
   system.stateVersion = "25.11";
