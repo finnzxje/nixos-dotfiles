@@ -7,12 +7,14 @@
 }:
 
 let
-  dotfiles = "~/nixos-dotfiles/config";
+  dotfiles = "${config.home.homeDirectory}/nixos-configs/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 in
+
 {
   imports = [
     ./shell
+    ./programs
   ];
 
   home = {
@@ -31,15 +33,11 @@ in
   xdg.enable = true;
 
   xdg.configFile."nvim" = {
-    # source = create_symlink "${dotfiles}/nvim";
-    source = ../config/nvim;
+    source = create_symlink "${dotfiles}/nvim";
   };
 
-  # link niri
-
   xdg.configFile."niri" = {
-    # source = create_symlink "${dotfiles}/niri";
-    source = ../config/niri;
+    source = create_symlink "${dotfiles}/niri";
   };
 
   programs.git = {
