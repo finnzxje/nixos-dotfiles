@@ -6,6 +6,7 @@
   ...
 }:
 {
+  imports = [ ./android.nix ];
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
