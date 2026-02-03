@@ -74,7 +74,6 @@ in
     gcc
     nodejs
     yarn
-    eza
 
     # neovim migration
     tree-sitter

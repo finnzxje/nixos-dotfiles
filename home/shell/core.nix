@@ -16,6 +16,7 @@
     shellAliases = {
       ls = "eza --icons -l -T -L=1";
       y = "yazi";
+      t = "tmux";
     };
 
     initContent = ''
@@ -39,4 +40,13 @@
     enableZshIntegration = true;
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 }
