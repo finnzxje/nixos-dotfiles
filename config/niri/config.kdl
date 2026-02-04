@@ -148,8 +148,9 @@ window-rule {
 }
 binds {
     // Mod-Shift-/, which is usually the same as Mod-?,
-
-    Mod+D { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+    Mod+D {
+        spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
+    }
     Mod+Shift+Slash {
         show-hotkey-overlay
     }
@@ -157,11 +158,10 @@ binds {
     Mod+B hotkey-overlay-title="Open browser" {
         spawn "sh" "-lc" "${BROWSER:-firefox}"
     }
-
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" {
         spawn "kitty"
     }
-        Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
         spawn "swaylock"
     }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.

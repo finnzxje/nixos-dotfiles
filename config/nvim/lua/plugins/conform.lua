@@ -16,6 +16,7 @@ return {
 			yaml = { "yamlfmt" },
 			python = { "isort" },
 			nix = { "nixfmt" },
+			kdl = { "kdlfmt" },
 		},
 
 		format_on_save = function(bufnr)
