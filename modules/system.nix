@@ -118,6 +118,8 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+
+    xwayland-satellite
     vim
     wget
     curl

@@ -11,6 +11,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/system.nix
+    ./nvidia.nix
   ];
 
   boot.loader = {

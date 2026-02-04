@@ -154,6 +154,10 @@ binds {
         show-hotkey-overlay
     }
     // Suggested binds for running programs: terminal, app launcher, screen locker.
+    Mod+B hotkey-overlay-title="Open browser" {
+        spawn "sh" "-lc" "${BROWSER:-firefox}"
+    }
+
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" {
         spawn "kitty"
     }
