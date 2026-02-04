@@ -9,6 +9,7 @@
   imports = [
     ./android.nix
     ./tlp.nix
+    ./keyboard.nix
   ];
   users.users.${username} = {
     isNormalUser = true;
