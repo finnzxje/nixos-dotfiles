@@ -14,6 +14,7 @@
   environment.systemPackages = with pkgs; [
     gnumake
     wl-clipboard
+    cliphist
   ];
 
   services = {
