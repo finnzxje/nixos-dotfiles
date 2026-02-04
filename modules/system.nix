@@ -10,6 +10,7 @@
     ./android.nix
     ./tlp.nix
     ./keyboard.nix
+    ./misc.nix
   ];
   users.users.${username} = {
     isNormalUser = true;
