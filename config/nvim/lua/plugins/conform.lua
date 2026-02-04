@@ -44,4 +44,21 @@ return {
 			desc = "Re-enable autoformat-on-save",
 		}),
 	},
+	keys = {
+		{
+			"<leader>tf",
+			function()
+				-- If autoformat is currently disabled for this buffer,
+				-- then enable it, otherwise disable it
+				if vim.b.disable_autoformat then
+					vim.cmd("FormatEnable")
+					vim.notify("Enabled autoformat for current buffer")
+				else
+					vim.cmd("FormatDisable!")
+					vim.notify("Disabled autoformat for current buffer")
+				end
+			end,
+			desc = "Toggle autoformat for current buffer",
+		},
+	},
 }
