@@ -6,7 +6,10 @@
   ...
 }:
 {
-  imports = [ ./android.nix ];
+  imports = [
+    ./android.nix
+    ./tlp.nix
+  ];
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [
@@ -150,7 +153,7 @@
     which
     tree
 
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     tuigreet
 
   ];
@@ -175,9 +178,9 @@
   services.blueman.enable = true;
 
   services.printing.enable = true;
-  services.power-profiles-daemon = {
-    enable = true;
-  };
+  # services.power-profiles-daemon = {
+  #   enable = true;
+  # };
   services.upower.enable = true;
 
 }
