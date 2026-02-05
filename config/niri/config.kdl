@@ -602,4 +602,5 @@ window-rule {
 //     }
 // }
 spawn-at-startup "fcitx5"
+spawn-sh-at-startup "sleep 5 && qbittorrent --no-splash"
 

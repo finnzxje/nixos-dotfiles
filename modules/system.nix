@@ -19,7 +19,6 @@
       "networkmanager"
       "docker"
     ];
-    # shell = pkgs.zsh;
   };
   programs.zsh = {
     enable = true;
@@ -148,7 +147,7 @@
     fzf
     fd
 
-    ncdu # analyzer your disk uage Interactively
+    ncdu # analyzer your disk usage Interactively
 
     # misc
     file
