@@ -12,6 +12,7 @@
     ./keyboard.nix
     ./misc.nix
     ./virtualisation.nix
+    ./java.nix
   ];
   users.users.${username} = {
     isNormalUser = true;

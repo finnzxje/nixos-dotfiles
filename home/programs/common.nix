@@ -5,6 +5,7 @@
     qbittorrent
     google-chrome
     mpv
+    jetbrains.idea
   ];
 
 }
