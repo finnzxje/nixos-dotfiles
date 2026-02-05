@@ -4,5 +4,6 @@
     ./common.nix
     ./noctalia
     ./xdg
+    ./kitty
   ];
 }

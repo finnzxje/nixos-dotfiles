@@ -101,7 +101,6 @@ in
     # networking
     dnsutils
 
-    kitty
     nil
   ];
 

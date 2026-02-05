@@ -16,7 +16,7 @@
       #type database  DBuser  auth-method
       local all       all     trust
     '';
-    extraPlugins =
+    extensions =
       ps: with ps; [
         # postgis
         # pg_repack
