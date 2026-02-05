@@ -46,24 +46,6 @@ in
     settings.user.email = "minhthinh0900@gmail.com";
   };
 
-  # yazi configuration
-  programs.yazi = {
-    enable = true;
-    enableZshIntegration = true;
-    plugins = {
-      lazygit = pkgs.yaziPlugins.lazygit;
-      full-border = pkgs.yaziPlugins.full-border;
-      git = pkgs.yaziPlugins.git;
-      starship = pkgs.yaziPlugins.starship;
-    };
-
-    initLua = ''
-      require("full-border"):setup()
-      require("git"):setup()
-      require("starship"):setup()
-    '';
-  };
-
   home.packages = with pkgs; [
     neofetch
 

@@ -5,5 +5,6 @@
     ./noctalia
     ./xdg
     ./kitty
+    ./yazi
   ];
 }
