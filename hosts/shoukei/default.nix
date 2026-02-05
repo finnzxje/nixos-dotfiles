@@ -12,6 +12,7 @@
     ./hardware-configuration.nix
     ../../modules/system.nix
     ./nvidia.nix
+    ./postgres.nix
   ];
 
   boot.loader = {
