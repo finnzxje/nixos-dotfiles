@@ -11,4 +11,5 @@ return function()
 	})
 
 	vim.lsp.enable("nixd")
+	vim.lsp.enable("tinymist")
 end

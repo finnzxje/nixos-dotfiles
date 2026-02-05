@@ -3,5 +3,6 @@
     ./tmux
     ./common.nix
     ./noctalia
+    ./xdg
   ];
 }

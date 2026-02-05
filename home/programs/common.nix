@@ -12,6 +12,7 @@
           --set SKIP_HOST_UPDATE true
       '';
     }))
+    imv
   ];
 
 }
