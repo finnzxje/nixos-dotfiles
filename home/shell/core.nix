@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.bash = {
     enable = true;
@@ -10,9 +10,9 @@
     enable = true;
     enableCompletion = true;
     syntaxHighlighting.enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     oh-my-zsh.enable = true;
-
+    dotDir = config.home.homeDirectory;
     shellAliases = {
       ls = "eza --icons -l -T -L=1";
       y = "yazi";
