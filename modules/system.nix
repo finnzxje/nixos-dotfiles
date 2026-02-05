@@ -11,6 +11,7 @@
     ./tlp.nix
     ./keyboard.nix
     ./misc.nix
+    ./virtualisation.nix
   ];
   users.users.${username} = {
     isNormalUser = true;
