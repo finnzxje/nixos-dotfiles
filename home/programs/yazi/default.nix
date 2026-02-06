@@ -8,6 +8,20 @@
         linemode = "size_and_mtime";
         sort_by = "mtime";
       };
+      plugin = {
+        prepend_fetchers = [
+          {
+            id = "git";
+            url = "*";
+            run = "git";
+          }
+          {
+            id = "git";
+            url = "*/";
+            run = "git";
+          }
+        ];
+      };
     };
     keymap = {
       mgr = {
@@ -90,7 +104,7 @@
       end
 
       require("full-border"):setup()
-      require("git"):setup()
+      require("git"):setup { order = 1500, }
       require("starship"):setup()
     '';
   };

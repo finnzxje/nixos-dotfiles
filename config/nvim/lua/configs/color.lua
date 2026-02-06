@@ -1,2 +1,3 @@
 require("catppuccin").setup({})
 vim.cmd.colorscheme("catppuccin-macchiato")
+vim.o.background = "dark"

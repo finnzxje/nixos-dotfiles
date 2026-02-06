@@ -17,10 +17,13 @@
       ls = "eza --icons -l -T -L=1";
       y = "yazi";
       t = "tmux";
+      oo = "cd $HOME/documents/obsidian-vault/finn";
+      or = "nvim $HOME/documents/obsidian-vault/finn/00-Inbox/*.md";
     };
 
     initContent = ''
       bindkey '^y' autosuggest-accept
+      export PATH="$HOME/bin:$PATH"
     '';
   };
 

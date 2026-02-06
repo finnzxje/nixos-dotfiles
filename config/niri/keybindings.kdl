@@ -444,5 +444,11 @@ binds {
     Mod+Y hotkey-overlay-title="Open a TUI FileManager " {
         spawn "kitty" "-e" "yazi"
     }
+    Mod+Alt+R hotkey-overlay-title="Theme picker " {
+        spawn-sh "$HOME/bin/theme-picker"
+    }
+    Mod+Return hotkey-overlay-title="btop" {
+        spawn-sh "kitty -e btop"
+    }
 }
 

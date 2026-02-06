@@ -17,6 +17,10 @@
     zathura
     obs-studio
     fuzzel
+    telegram-desktop
+    obsidian
+    zotero
+
   ];
 
 }
