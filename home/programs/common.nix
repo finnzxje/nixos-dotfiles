@@ -15,6 +15,8 @@
     imv
 
     zathura
+    obs-studio
+    fuzzel
   ];
 
 }

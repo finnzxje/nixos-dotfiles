@@ -6,7 +6,7 @@
     settings = {
       mgr = {
         linemode = "size_and_mtime";
-        sortby = "mtime";
+        sort_by = "mtime";
       };
     };
     keymap = {

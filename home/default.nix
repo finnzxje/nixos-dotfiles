@@ -48,7 +48,7 @@ in
   };
 
   home.packages = with pkgs; [
-    neofetch
+    fastfetch
 
     # utils
 

@@ -38,8 +38,8 @@
         "autoShowDelay": 150,
         "backgroundOpacity": 0.93,
         "barType": "simple",
-        "capsuleOpacity": 1,
-        "density": "default",
+        "capsuleOpacity": 0.43,
+        "density": "comfortable",
         "displayMode": "always_visible",
         "floating": false,
         "frameRadius": 12,
@@ -49,7 +49,7 @@
         "marginVertical": 4,
         "monitors": [
         ],
-        "outerCorners": true,
+        "outerCorners": false,
         "position": "top",
         "screenOverrides": [
         ],
@@ -225,7 +225,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Noctalia (default)",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "useWallpaperColors": false
     },
@@ -509,7 +509,11 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "pywalfox"
+                "id": "discord"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
             }
         ],
         "enableUserTheming": false
@@ -518,9 +522,9 @@
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
         "boxBorderEnabled": false,
-        "fontDefault": "Sans Serif",
-        "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontDefault": "JetBrainsMono Nerd Font",
+        "fontDefaultScale": 1.05,
+        "fontFixed": "JetBrainsMono Nerd Font",
         "fontFixedScale": 1,
         "networkPanelView": "wifi",
         "panelBackgroundOpacity": 0.93,
