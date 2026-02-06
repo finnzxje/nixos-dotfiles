@@ -3,6 +3,12 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    settings = {
+      mgr = {
+        linemode = "size_and_mtime";
+        sortby = "mtime";
+      };
+    };
     keymap = {
       mgr = {
         prepend_keymap = [
