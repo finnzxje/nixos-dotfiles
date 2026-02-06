@@ -71,6 +71,7 @@
                     "id": "Workspace",
                     "labelMode": "index",
                     "occupiedColor": "secondary",
+                    "pillSize": 0.6,
                     "reverseScroll": false,
                     "showApplications": false,
                     "showBadge": true,
@@ -85,31 +86,33 @@
                     "usePrimaryColor": false
                 },
                 {
+                    "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false,
-                    "usePrimaryColor": false
+                    "useCustomFont": false
                 },
                 {
                     "compactMode": true,
                     "diskPath": "/",
+                    "iconColor": "none",
                     "id": "SystemMonitor",
                     "showCpuFreq": false,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
-                    "showDiskAsFree": false,
+                    "showDiskAvailable": false,
                     "showDiskUsage": false,
+                    "showDiskUsageAsPercent": false,
                     "showGpuTemp": false,
                     "showLoadAverage": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
                     "showNetworkStats": false,
                     "showSwapUsage": false,
-                    "useMonospaceFont": true,
-                    "usePrimaryColor": false
+                    "textColor": "none",
+                    "useMonospaceFont": true
                 },
                 {
                     "colorizeIcons": false,
@@ -172,8 +175,7 @@
                     "hideIfNotDetected": true,
                     "id": "Battery",
                     "showNoctaliaPerformance": false,
-                    "showPowerProfiles": false,
-                    "warningThreshold": 30
+                    "showPowerProfiles": false
                 },
                 {
                     "displayMode": "onhover",
@@ -319,6 +321,8 @@
         "autoStartAuth": false,
         "avatarImage": "/home/finnzxje/.face",
         "boxRadiusRatio": 1,
+        "clockFormat": "hh\\nmm",
+        "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
         "enableLockScreenCountdown": true,
@@ -384,6 +388,8 @@
     },
     "notifications": {
         "backgroundOpacity": 1,
+        "batteryCriticalThreshold": 5,
+        "batteryWarningThreshold": 20,
         "criticalUrgencyDuration": 15,
         "enableKeyboardLayoutToast": true,
         "enableMediaToast": false,
@@ -471,12 +477,14 @@
         "showHeader": true,
         "showNumberLabels": true
     },
-    "settingsVersion": 46,
+    "settingsVersion": 47,
     "systemMonitor": {
         "cpuCriticalThreshold": 90,
-        "cpuPollingInterval": 3000,
+        "cpuPollingInterval": 1000,
         "cpuWarningThreshold": 80,
         "criticalColor": "",
+        "diskAvailCriticalThreshold": 10,
+        "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
         "diskPollingInterval": 30000,
         "diskWarningThreshold": 80,
@@ -487,13 +495,12 @@
         "gpuWarningThreshold": 80,
         "loadAvgPollingInterval": 3000,
         "memCriticalThreshold": 90,
-        "memPollingInterval": 3000,
+        "memPollingInterval": 1000,
         "memWarningThreshold": 80,
-        "networkPollingInterval": 3000,
+        "networkPollingInterval": 1000,
         "swapCriticalThreshold": 90,
         "swapWarningThreshold": 80,
         "tempCriticalThreshold": 90,
-        "tempPollingInterval": 3000,
         "tempWarningThreshold": 80,
         "useCustomColors": false,
         "warningColor": ""
@@ -538,6 +545,7 @@
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": true,
         "solidColor": "#1a1a2e",
+        "sortOrder": "name",
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": "random",
