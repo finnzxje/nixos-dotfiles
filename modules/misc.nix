@@ -20,7 +20,11 @@
   services = {
     gvfs.enable = true; # Mount, trash, and other functionalities
     tumbler.enable = true; # Thumbnail support for images
+    samba.enable = true;
+    udisks2.enable = true;
   };
+
+  security.polkit.enable = true;
 
   programs = {
     # dconf is a low-level configuration system.
