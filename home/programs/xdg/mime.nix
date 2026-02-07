@@ -14,7 +14,7 @@
     defaultApplications =
       let
         browser = [
-          "firefox.desktop"
+          "zen-beta.desktop"
           "google-chrome.desktop"
         ];
         editor = [

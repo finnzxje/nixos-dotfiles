@@ -1,5 +1,17 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.zen-browser.homeModules.beta
+    # or inputs.zen-browser.homeModules.twilight
+    # or inputs.zen-browser.homeModules.twilight-official
+  ];
+
+  programs.zen-browser.enable = true;
   home.packages = with pkgs; [
     anki
     qbittorrent

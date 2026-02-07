@@ -8,7 +8,7 @@
     EDITOR = "nvim";
     TERMINAL = "kitty";
     VISUAL = "nvim";
-    BROWSER = "firefox"; # "zen"
+    BROWSER = "zen-beta";
   };
 
 }

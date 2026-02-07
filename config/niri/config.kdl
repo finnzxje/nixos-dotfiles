@@ -57,7 +57,7 @@ input {
 //     position x=1280 y=0
 // }
 layout {
-    gaps 5
+    gaps 8
     // center-focused-column "on-overflow"
     center-focused-column "never"
     always-center-single-column
