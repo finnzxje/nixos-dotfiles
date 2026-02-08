@@ -32,7 +32,9 @@
     telegram-desktop
     obsidian
     zotero
-
+    typst
+    pandoc
+    pdfannots2json
   ];
 
 }

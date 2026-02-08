@@ -24,8 +24,7 @@
       in
       {
         "application/json" = browser;
-        "application/pdf" = browser; # TODO: pdf viewer
-
+        "application/pdf" = "org.pwmt.zathura.desktop"; # TODO: pdf viewer
         "text/html" = browser;
         "text/xml" = browser;
         "text/plain" = editor;
