@@ -13,6 +13,7 @@
     autosuggestion.enable = true;
     oh-my-zsh.enable = true;
     dotDir = config.home.homeDirectory;
+    history.ignoreSpace = true;
     shellAliases = {
       ls = "eza --icons -l -T -L=1";
       y = "yazi";

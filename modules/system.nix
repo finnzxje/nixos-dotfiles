@@ -157,8 +157,6 @@
     tree
 
     # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-    tuigreet
-
   ];
 
   services = {

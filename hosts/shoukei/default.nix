@@ -55,13 +55,24 @@
   programs.niri.enable = true;
   programs.xwayland.enable = true;
 
-  services.displayManager.ly.enable = false;
-  services.greetd.enable = true;
-  services.greetd.settings.default_session = {
-    # command = "niri-session";
-    command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions ${pkgs.niri}/share/wayland-sessions --cmd niri-session";
-    # user = "${username}";
-    user = "greeter";
+  # services.greetd.settings.default_session = {
+  # command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-session --sessions ${pkgs.niri}/share/wayland-sessions --cmd niri-session";
+  #   user = "${username}";
+  # };
+  services = {
+    displayManager.autoLogin.enable = false;
+
+    displayManager.dms-greeter = {
+      enable = true;
+      compositor.name = "niri";
+      configHome = "/home/${username}";
+      logs = {
+        save = true;
+        path = "/tmp/dms-greeter.log";
+      };
+    };
+
+    greetd.enable = true;
   };
 
   # mount window partition
