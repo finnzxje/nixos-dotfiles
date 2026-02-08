@@ -1,4 +1,5 @@
 {
+  lib,
   pkgs,
   config,
   inputs,
@@ -17,6 +18,15 @@
   programs.noctalia-shell = {
     enable = true;
     systemd.enable = true;
+  };
+
+  # Start Noctalia as soon as niri starts, instead of waiting for graphical-session.target.
+  systemd.user.services.noctalia-shell = lib.mkIf config.programs.noctalia-shell.systemd.enable {
+    Unit = {
+      After = lib.mkForce [ "niri.service" ];
+      PartOf = lib.mkForce [ "niri.service" ];
+    };
+    Install.WantedBy = lib.mkForce [ "niri.service" ];
   };
 
   gtk = {
