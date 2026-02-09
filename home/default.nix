@@ -73,6 +73,7 @@ in
     nixfmt
     go
     nixd
+    harper
 
     # misc
     lazygit
