@@ -6,5 +6,6 @@
     ./xdg
     ./kitty
     ./yazi
+    ./spotify
   ];
 }

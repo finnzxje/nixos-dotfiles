@@ -35,6 +35,6 @@
     typst
     pandoc
     pdfannots2json
+    opencode
   ];
-
 }
