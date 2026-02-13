@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options = {
@@ -8,11 +13,7 @@
   config = lib.mkIf config.zapret.enable (
     let
       SHARE_PATH = "${pkgs.zapret}/usr/share/zapret/files";
-      LIST_PATH = pkgs.writeText "zapret-hostlist.txt" ''
-        medium.com
-        www.medium.com
-        cdn-images-1.medium.com
-      '';
+      LIST_PATH = "/var/lib/zapret/hostlist.txt";
       QUICK_INITIAL = "${SHARE_PATH}/fake/quic_initial_www_google_com.bin";
       CLIENT_HELLO = "${SHARE_PATH}/fake/tls_clienthello_www_google_com.bin";
     in
@@ -47,6 +48,14 @@
           "--filter-tcp=6695-6710 --dpi-desync=fake,split2 --dpi-desync-repeats=8 --dpi-desync-fooling=md5sig --dpi-desync-autottl=2 --dpi-desync-fake-tls=${CLIENT_HELLO}"
         ];
       };
+
+      # Keep a private hostlist readable only by root while still letting zapret load it.
+      systemd.services.zapret.serviceConfig = {
+        DynamicUser = lib.mkForce false;
+        User = lib.mkForce "root";
+        Group = lib.mkForce "root";
+      };
+
       networking.firewall.extraCommands = "
         ip46tables -t mangle -I POSTROUTING -p tcp --dport 6695:6710 -m mark ! --mark 0x40000000/0x40000000 -j NFQUEUE --queue-num 200 --queue-bypass
       ";
