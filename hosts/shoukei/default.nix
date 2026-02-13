@@ -40,7 +40,7 @@
     enable = true;
     openFirewall = true;
   };
-  # services.zapret.enable = true;
+  zapret.enable = true;
   # services.resolved.enable = true;
 
   # services.resolved.settings.Resolve.DNS = [

@@ -13,6 +13,7 @@
     ./misc.nix
     ./virtualisation.nix
     ./java.nix
+    ./zapret.nix
   ];
   users.users.${username} = {
     isNormalUser = true;
