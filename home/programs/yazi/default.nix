@@ -76,6 +76,11 @@
             run = "tab_create --current";
             desc = "Create a new tab with CWD";
           }
+          {
+            on = "e";
+            run = "shell --orphan --confirm 'thunar \"$PWD\"'";
+            desc = "Open Thunar at current dir";
+          }
         ];
       };
 
