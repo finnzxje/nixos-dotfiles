@@ -37,4 +37,17 @@
     pdfannots2json
     opencode
   ];
+
+  # imv keybindings have some problems with urob's HRMs so I use feh
+  programs.feh = {
+    enable = true;
+    keybindings = {
+      scroll_left = "h";
+      scroll_right = "l";
+      scroll_down = "j";
+      scroll_up = "k";
+      zoom_in = "plus";
+      zoom_out = "minus";
+    };
+  };
 }

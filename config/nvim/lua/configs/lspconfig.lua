@@ -23,4 +23,5 @@ return function()
 		},
 	})
 	vim.lsp.enable("harper_ls")
+	vim.lsp.enable("gopls")
 end

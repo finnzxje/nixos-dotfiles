@@ -9,6 +9,9 @@ binds {
     Mod+T {
         spawn "kitty"
     }
+    Mod+M {
+        spawn "spotify"
+    }
     Mod+Shift+Return {
         spawn "alacritty"
     }

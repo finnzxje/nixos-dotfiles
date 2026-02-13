@@ -56,11 +56,11 @@
 
         "audio/*" = [ "mpv.desktop" ];
         "video/*" = [ "mpv.desktop" ];
-        "image/*" = [ "imv.desktop" ];
-        "image/gif" = [ "imv.desktop" ];
-        "image/jpeg" = [ "imv.desktop" ];
-        "image/png" = [ "imv.desktop" ];
-        "image/webp" = [ "imv.desktop" ];
+        "image/*" = [ "feh.desktop" ];
+        "image/gif" = [ "feh.desktop" ];
+        "image/jpeg" = [ "feh.desktop" ];
+        "image/png" = [ "feh.desktop" ];
+        "image/webp" = [ "feh.desktop" ];
 
         "inode/directory" = [ "yazi.desktop" ];
       };
