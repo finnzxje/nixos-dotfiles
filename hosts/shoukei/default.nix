@@ -36,21 +36,11 @@
     "8.8.8.8"
   ];
 
-  services.cloudflare-warp = {
-    enable = true;
-    openFirewall = true;
-  };
+  # services.cloudflare-warp = {
+  #   enable = true;
+  #   openFirewall = true;
+  # };
   zapret.enable = true;
-  # services.resolved.enable = true;
-
-  # services.resolved.settings.Resolve.DNS = [
-  #   "1.1.1.1"
-  #   "1.0.0.1"
-  #   "8.8.8.8"
-  #   "8.8.4.4"
-  #
-  # ];
-  # services.resolved.settings.Resolve.DNSOverTLS = true;
 
   programs.niri.enable = true;
   programs.xwayland.enable = true;

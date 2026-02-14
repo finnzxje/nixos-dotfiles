@@ -27,15 +27,20 @@
     imv
 
     zathura
+    calibre
+    foliate
+    obsidian
+    zotero
+    sigil
+
     obs-studio
     fuzzel
     telegram-desktop
-    obsidian
-    zotero
     typst
     pandoc
     pdfannots2json
     opencode
+
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh
