@@ -58,6 +58,7 @@ in
     nodejs
     yarn
     libnotify
+    libcanberra-gtk3
 
     # neovim migration
     tree-sitter
