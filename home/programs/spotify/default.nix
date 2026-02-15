@@ -10,6 +10,8 @@ in
       adblockify
       hidePodcasts
       shuffle
+      fullAppDisplay
+      keyboardShortcut
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";

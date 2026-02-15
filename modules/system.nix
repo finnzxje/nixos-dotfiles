@@ -125,7 +125,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-
+    nushell
     xwayland-satellite
     vim
     wget

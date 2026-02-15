@@ -3,6 +3,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
     settings = {
       mgr = {
         linemode = "size_and_mtime";

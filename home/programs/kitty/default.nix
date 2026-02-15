@@ -9,6 +9,5 @@ in
 
   xdg.configFile."kitty" = {
     source = mkSymlink "${confPath}";
-    # source = ./conf;
   };
 }

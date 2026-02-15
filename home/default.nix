@@ -57,6 +57,7 @@ in
     gcc
     nodejs
     yarn
+    libnotify
 
     # neovim migration
     tree-sitter

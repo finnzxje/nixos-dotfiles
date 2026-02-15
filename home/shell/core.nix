@@ -44,20 +44,24 @@
       line_break.disabled = true;
     };
     enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 
   programs.atuin = {
     enable = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 
   programs.eza = {
     enable = true;
     enableZshIntegration = true;
+    enableNushellIntegration = true;
   };
 }
