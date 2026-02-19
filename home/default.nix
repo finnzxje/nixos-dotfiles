@@ -76,6 +76,9 @@ in
     go
     nixd
     harper
+    pyright
+    ruff
+    isort
 
     # misc
     lazygit
@@ -90,9 +93,6 @@ in
     polkit_gnome
     (python313.withPackages (
       ps: with ps; [
-        # python language server
-        pyright
-        ruff
 
         pipx # Install and Run Python Applications in Isolated Environments
         black # python formatter

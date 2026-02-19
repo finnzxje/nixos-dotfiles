@@ -24,4 +24,27 @@ return function()
 	})
 	vim.lsp.enable("harper_ls")
 	vim.lsp.enable("gopls")
+	vim.lsp.config.bashls = {
+		cmd = { "bash-language-server", "start" },
+		filetypes = { "bash", "sh", "zsh" },
+	}
+	vim.lsp.enable("bashls")
+	vim.lsp.config["pyright"] = {
+		cmd = { "pyright-langserver", "--stdio" },
+		filetypes = { "python" },
+		root_markers = {
+			"pyproject.toml",
+			"setup.py",
+			"setup.cfg",
+			"requirements.txt",
+			"Pipfile",
+			"pyrightconfig.json",
+			".git",
+		},
+		settings = {
+			python = {},
+		},
+	}
+	vim.lsp.enable("pyright")
+	vim.lsp.enable("ruff")
 end

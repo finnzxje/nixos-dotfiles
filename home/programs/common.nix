@@ -26,7 +26,7 @@
     }))
     imv
 
-    zathura
+    # zathura
     calibre
     foliate
     obsidian
@@ -40,6 +40,8 @@
     pandoc
     pdfannots2json
     opencode
+
+    localsend
 
   ];
 
