@@ -2,6 +2,7 @@
   imports = [
     ./tmux
     ./common.nix
+    ./gtk
     ./noctalia
     ./xdg
     ./kitty

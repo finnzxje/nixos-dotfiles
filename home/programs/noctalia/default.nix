@@ -10,11 +10,10 @@
     inputs.noctalia.homeModules.default
   ];
   home.packages = with pkgs; [
-    app2unit # Launch Desktop Entries (or arbitrary commands) as Systemd user units
-    gtk3
-    adwaita-icon-theme # for icon theme
-
+    # Launch Desktop Entries (or arbitrary commands) as Systemd user units
+    app2unit
   ];
+
   programs.noctalia-shell = {
     enable = true;
     systemd.enable = true;
@@ -27,15 +26,6 @@
       PartOf = lib.mkForce [ "niri.service" ];
     };
     Install.WantedBy = lib.mkForce [ "niri.service" ];
-  };
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
-    };
   };
 
   home.sessionVariables = {
