@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  programs.dconf.enable = true;
   programs.sioyek = {
     enable = true;
     config = {
@@ -10,11 +9,11 @@
     bindings = {
       "screen_down" = [
         "<C-d>"
-        ""
+        "d"
       ];
       "screen_up" = [
         "<C-u>"
-        ""
+        "u"
       ];
     };
   };

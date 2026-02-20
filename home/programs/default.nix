@@ -7,5 +7,6 @@
     ./kitty
     ./yazi
     ./spotify
+    ./sioyek
   ];
 }
