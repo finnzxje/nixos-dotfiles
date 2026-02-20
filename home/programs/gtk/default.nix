@@ -4,6 +4,7 @@
     gtk3
     adwaita-icon-theme
     glib # provides gsettings
+    nwg-look
   ];
 
   gtk = {
@@ -13,6 +14,10 @@
     iconTheme = {
       name = "Adwaita";
       package = pkgs.adwaita-icon-theme;
+    };
+    theme = {
+      name = "adw-gtk3";
+      package = pkgs.adw-gtk3;
     };
   };
 }
