@@ -16,6 +16,9 @@ binds {
         spawn "alacritty"
     }
     // Launcher
+    Mod+Shift+W {
+        spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"
+    }
     Mod+D {
         spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"
     }
@@ -55,7 +58,7 @@ binds {
         spawn-sh "noctalia-shell ipc call media pause"
     }
     XF86AudioPrev allow-when-locked=true {
-        spawn-sh "octalia-shell ipc call media previous"
+        spawn-sh "noctalia-shell ipc call media previous"
     }
     XF86AudioNext allow-when-locked=true {
         spawn-sh "noctalia-shell ipc call media next"
@@ -454,3 +457,4 @@ binds {
         spawn-sh "kitty -e btop"
     }
 }
+
