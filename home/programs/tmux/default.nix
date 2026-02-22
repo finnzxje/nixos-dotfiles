@@ -67,7 +67,6 @@
       set -g @dracula-plugins "cpu-usage ram-usage"
       set -g status-position bottom
       set -g @dracula-show-empty-plugins false
-
     '';
   };
 
