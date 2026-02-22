@@ -4,6 +4,7 @@
     enable = true;
     enableZshIntegration = true;
     enableNushellIntegration = true;
+    shellWrapperName = "y";
     settings = {
       mgr = {
         linemode = "size_and_mtime";
