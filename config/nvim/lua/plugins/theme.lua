@@ -3,13 +3,13 @@ return {
 	{ "sainnhe/gruvbox-material", lazy = true },
 
 {
-	"sainnhe/gruvbox-material",
-	lazy = false,
+	"catppuccin/nvim",
+	name = "catppuccin",
 	priority = 1000,
+	lazy = false,
 	config = function()
-		vim.o.background = "light"
-		vim.g.gruvbox_material_background = "soft"
-		vim.cmd.colorscheme("gruvbox-material")
+		vim.o.background = "dark"
+		vim.cmd.colorscheme("catppuccin-macchiato")
 	end,
 },
 }

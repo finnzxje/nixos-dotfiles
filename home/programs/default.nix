@@ -10,5 +10,6 @@
     ./yazi
     ./spotify
     ./sioyek
+    ./vesktop
   ];
 }
