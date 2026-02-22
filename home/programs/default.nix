@@ -3,6 +3,7 @@
     ./tmux
     ./common.nix
     ./gtk
+    ./hypridle
     ./noctalia
     ./xdg
     ./kitty
