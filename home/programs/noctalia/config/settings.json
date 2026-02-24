@@ -575,14 +575,6 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "discord"
-            },
-            {
-                "enabled": true,
-                "id": "zenBrowser"
-            },
-            {
-                "enabled": true,
                 "id": "btop"
             },
             {
@@ -592,6 +584,10 @@
             {
                 "enabled": true,
                 "id": "gtk"
+            },
+            {
+                "enabled": true,
+                "id": "qt"
             }
         ],
         "enableUserTheming": false

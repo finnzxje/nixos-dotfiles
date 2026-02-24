@@ -40,6 +40,12 @@ window-rule {
     open-on-workspace "4"
 }
 
+// Make Anki transparent by default.
+window-rule {
+    match app-id="^(anki|net\\.ankiweb\\.Anki)$"
+    opacity 0.9
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -56,3 +62,16 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
+
+// Make unfocused windows slightly transparent.
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+window-rule {
+    match app-id="^(sioyek|Sioyek|org\\.sioyek\\.sioyek)$" is-active=false
+    opacity 1.0
+}
+
