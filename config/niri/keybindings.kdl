@@ -252,19 +252,19 @@ binds {
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
     Mod+1 {
-        focus-workspace "1"
+        focus-workspace "web"
     }
     Mod+2 {
-        focus-workspace "2"
+        focus-workspace "term"
     }
     Mod+3 {
-        focus-workspace "3"
+        focus-workspace "file"
     }
     Mod+4 {
-        focus-workspace "4"
+        focus-workspace "music"
     }
     Mod+5 {
-        focus-workspace "5"
+        focus-workspace "text"
     }
     Mod+6 {
         focus-workspace 6
@@ -282,19 +282,19 @@ binds {
         focus-workspace 0
     }
     Mod+Shift+1 {
-        move-column-to-workspace "1"
+        move-column-to-workspace "web"
     }
     Mod+Shift+2 {
-        move-column-to-workspace "2"
+        move-column-to-workspace "term"
     }
     Mod+Shift+3 {
-        move-column-to-workspace "3"
+        move-column-to-workspace "file"
     }
     Mod+Shift+4 {
-        move-column-to-workspace "4"
+        move-column-to-workspace "music"
     }
     Mod+Shift+5 {
-        move-column-to-workspace "5"
+        move-column-to-workspace "text"
     }
     Mod+Shift+6 {
         move-column-to-workspace 6
@@ -457,4 +457,3 @@ binds {
         spawn-sh "kitty -e btop"
     }
 }
-

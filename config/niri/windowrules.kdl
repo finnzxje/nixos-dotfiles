@@ -1,8 +1,8 @@
-workspace "1" {}
-workspace "2" {}
-workspace "3" {}
-workspace "4" {}
-workspace "5" {}
+workspace "web" {}
+workspace "term" {}
+workspace "file" {}
+workspace "music" {}
+workspace "text" {}
 
 window-rule {
     match app-id="^org\\.wezfurlong\\.wezterm$"
@@ -22,22 +22,22 @@ window-rule {
 
 window-rule {
     match app-id="^zen-beta$"
-    open-on-workspace "1"
+    open-on-workspace "web"
 }
 
 window-rule {
     match app-id="^kitty$"
-    open-on-workspace "2"
+    open-on-workspace "term"
 }
 
 window-rule {
     match app-id="^thunar$"
-    open-on-workspace "3"
+    open-on-workspace "file"
 }
 
 window-rule {
     match app-id="^Spotify$"
-    open-on-workspace "4"
+    open-on-workspace "music"
 }
 
 // Make Anki transparent by default.
@@ -74,4 +74,3 @@ window-rule {
     match app-id="^(sioyek|Sioyek|org\\.sioyek\\.sioyek)$" is-active=false
     opacity 1.0
 }
-
