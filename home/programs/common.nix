@@ -14,7 +14,11 @@
   programs.zen-browser.enable = true;
   programs.zen-browser.suppressXdgMigrationWarning = true;
   home.packages = with pkgs; [
-    anki
+    # nixpkgs regression on unstable: anki test imports fail due missing QtWebChannel.
+    # Keep runtime package, skip broken upstream checks until fixed.
+    (anki.overrideAttrs (_: {
+      doCheck = false;
+    }))
     qbittorrent
     google-chrome
     mpv
@@ -39,6 +43,7 @@
 
     localsend
     yt-dlp
+    lazydocker
 
   ];
 
