@@ -43,7 +43,7 @@
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 0.43,
-        "density": "comfortable",
+        "density": "default",
         "displayMode": "always_visible",
         "floating": false,
         "frameRadius": 12,
@@ -56,6 +56,10 @@
         "outerCorners": false,
         "position": "top",
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "HDMI-A-1"
+            }
         ],
         "showCapsule": true,
         "showOutline": false,
@@ -63,7 +67,7 @@
         "widgets": {
             "center": [
                 {
-                    "characterCount": 2,
+                    "characterCount": 4,
                     "colorizeIcons": false,
                     "emptyColor": "secondary",
                     "enableScrollWheel": true,
@@ -75,7 +79,7 @@
                     "id": "Workspace",
                     "labelMode": "name",
                     "occupiedColor": "secondary",
-                    "pillSize": 0.6,
+                    "pillSize": 0.5900000000000001,
                     "showApplications": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": true,
@@ -343,7 +347,7 @@
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
-        "compactLockScreen": false,
+        "compactLockScreen": true,
         "dimmerOpacity": 0.2,
         "enableLockScreenCountdown": true,
         "enableShadows": true,
@@ -375,7 +379,7 @@
         "language": "",
         "lockOnSuspend": true,
         "lockScreenAnimations": false,
-        "lockScreenBlur": 0,
+        "lockScreenBlur": 0.15,
         "lockScreenCountdownDuration": 10000,
         "lockScreenMonitors": [
         ],

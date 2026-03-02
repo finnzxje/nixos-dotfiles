@@ -252,19 +252,19 @@ binds {
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
     Mod+1 {
-        focus-workspace "web"
+        focus-workspace "1WEB"
     }
     Mod+2 {
-        focus-workspace "term"
+        focus-workspace "2TERM"
     }
     Mod+3 {
-        focus-workspace "file"
+        focus-workspace "3FILE"
     }
     Mod+4 {
-        focus-workspace "music"
+        focus-workspace "4MUSIC"
     }
     Mod+5 {
-        focus-workspace "text"
+        focus-workspace "5TEXT"
     }
     Mod+6 {
         focus-workspace 6
@@ -282,19 +282,19 @@ binds {
         focus-workspace 0
     }
     Mod+Shift+1 {
-        move-column-to-workspace "web"
+        move-column-to-workspace "1WEB"
     }
     Mod+Shift+2 {
-        move-column-to-workspace "term"
+        move-column-to-workspace "2TERM"
     }
     Mod+Shift+3 {
-        move-column-to-workspace "file"
+        move-column-to-workspace "3FILE"
     }
     Mod+Shift+4 {
-        move-column-to-workspace "music"
+        move-column-to-workspace "4MUSIC"
     }
     Mod+Shift+5 {
-        move-column-to-workspace "text"
+        move-column-to-workspace "5TEXT"
     }
     Mod+Shift+6 {
         move-column-to-workspace 6

@@ -21,6 +21,7 @@
       oo = "cd $HOME/documents/obsidian-vault/finn";
       or = "nvim $HOME/documents/obsidian-vault/finn/00-Inbox/*.md";
       lg = "lazygit";
+      bc = "bc -l";
       deskapps = "{ find ~/.local/share/applications -maxdepth 1 -name '*.desktop' -printf '%f\\n' 2>/dev/null; \
                   find ~/.nix-profile/share/applications -maxdepth 1 -name '*.desktop' -printf '%f\\n' 2>/dev/null; \
                   find /run/current-system/sw/share/applications -maxdepth 1 -name '*.desktop' -printf '%f\\n' 2>/dev/null; \

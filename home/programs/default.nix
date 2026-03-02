@@ -12,5 +12,6 @@
     ./spotify
     ./sioyek
     ./vesktop
+    ./mpv
   ];
 }

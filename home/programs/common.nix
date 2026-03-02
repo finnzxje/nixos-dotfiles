@@ -14,14 +14,9 @@
   programs.zen-browser.enable = true;
   programs.zen-browser.suppressXdgMigrationWarning = true;
   home.packages = with pkgs; [
-    # nixpkgs regression on unstable: anki test imports fail due missing QtWebChannel.
-    # Keep runtime package, skip broken upstream checks until fixed.
-    (anki.overrideAttrs (_: {
-      doCheck = false;
-    }))
+    anki
     qbittorrent
     google-chrome
-    mpv
     jetbrains.idea
     vesktop
     imv
@@ -45,6 +40,7 @@
     yt-dlp
     lazydocker
 
+    arduino-ide
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh

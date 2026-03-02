@@ -59,6 +59,7 @@ in
     yarn
     libnotify
     libcanberra-gtk3
+    bc
 
     # neovim migration
     tree-sitter
@@ -79,6 +80,7 @@ in
     pyright
     ruff
     isort
+    jdt-language-server
 
     # misc
     lazygit
