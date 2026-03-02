@@ -22,7 +22,7 @@
     imv
 
     # zathura
-    calibre
+    # calibre
     foliate
     obsidian
     zotero
@@ -41,6 +41,7 @@
     lazydocker
 
     arduino-ide
+    devenv
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh
