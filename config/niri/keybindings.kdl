@@ -87,6 +87,9 @@ binds {
     Mod+O repeat=false {
         toggle-overview
     }
+    Mod+Shift+O {
+        spawn "obsidian"
+    }
     Mod+Left {
         focus-column-left
     }
@@ -252,19 +255,19 @@ binds {
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
     Mod+1 {
-        focus-workspace "1WEB"
+        focus-workspace "WEB"
     }
     Mod+2 {
-        focus-workspace "2TERM"
+        focus-workspace "TERM"
     }
     Mod+3 {
-        focus-workspace "3FILE"
+        focus-workspace "FILE"
     }
     Mod+4 {
-        focus-workspace "4MUSIC"
+        focus-workspace "MUSIC"
     }
     Mod+5 {
-        focus-workspace "5TEXT"
+        focus-workspace "TEXT"
     }
     Mod+6 {
         focus-workspace 6
@@ -282,19 +285,19 @@ binds {
         focus-workspace 0
     }
     Mod+Shift+1 {
-        move-column-to-workspace "1WEB"
+        move-column-to-workspace "WEB"
     }
     Mod+Shift+2 {
-        move-column-to-workspace "2TERM"
+        move-column-to-workspace "TERM"
     }
     Mod+Shift+3 {
-        move-column-to-workspace "3FILE"
+        move-column-to-workspace "FILE"
     }
     Mod+Shift+4 {
-        move-column-to-workspace "4MUSIC"
+        move-column-to-workspace "MUSIC"
     }
     Mod+Shift+5 {
-        move-column-to-workspace "5TEXT"
+        move-column-to-workspace "TEXT"
     }
     Mod+Shift+6 {
         move-column-to-workspace 6

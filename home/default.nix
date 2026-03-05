@@ -4,14 +4,10 @@
   username,
   inputs,
   ...
-}:
-
-let
+}: let
   dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-in
-
-{
+in {
   imports = [
     ./shell
     ./programs
@@ -74,6 +70,7 @@ in
     stylua
     typescript-language-server
     nixfmt
+    alejandra
     go
     nixd
     harper
@@ -81,9 +78,7 @@ in
     ruff
     isort
     jdt-language-server
-
-    # misc
-    lazygit
+    kulala-fmt
 
     # productivity
     btop
@@ -94,31 +89,31 @@ in
     nil
     polkit_gnome
     (python313.withPackages (
-      ps: with ps; [
+      ps:
+        with ps; [
+          pipx # Install and Run Python Applications in Isolated Environments
+          black # python formatter
+          uv # python project package manager
 
-        pipx # Install and Run Python Applications in Isolated Environments
-        black # python formatter
-        uv # python project package manager
+          # my commonly used python packages
+          jupyter
+          pandas
+          requests
+          pyquery
+          pyyaml
 
-        # my commonly used python packages
-        jupyter
-        pandas
-        requests
-        pyquery
-        pyyaml
-
-        # misc
-        protobuf # protocol buffer compiler
-        numpy
-      ]
+          # misc
+          protobuf # protocol buffer compiler
+          numpy
+        ]
     ))
   ];
 
   systemd.user.services.polkit-gnome-authentication-agent-1 = {
     Unit = {
       Description = "Polkit Authentication Agent";
-      After = [ "graphical-session.target" ];
-      Wants = [ "graphical-session.target" ];
+      After = ["graphical-session.target"];
+      Wants = ["graphical-session.target"];
     };
     Service = {
       Type = "simple";
@@ -127,8 +122,7 @@ in
       RestartSec = 1;
     };
     Install = {
-      WantedBy = [ "graphical-session.target" ];
+      WantedBy = ["graphical-session.target"];
     };
   };
-
 }

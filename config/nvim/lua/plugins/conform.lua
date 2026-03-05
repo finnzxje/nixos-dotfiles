@@ -15,8 +15,9 @@ return {
 			typescriptreact = { "prettier", stop_after_first = true },
 			yaml = { "yamlfmt" },
 			python = { "isort" },
-			nix = { "nixfmt" },
+			nix = { "alejandra" },
 			kdl = { "kdlfmt" },
+			http = { "kulala-fmt" },
 		},
 
 		format_on_save = function(bufnr)

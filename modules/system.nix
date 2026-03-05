@@ -4,8 +4,7 @@
   username,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     ./android.nix
     ./tlp.nix
@@ -66,10 +65,9 @@
     enable = true;
     type = "fcitx5";
     fcitx5 = {
-      addons = with pkgs; [ fcitx5-bamboo ];
+      addons = with pkgs; [fcitx5-bamboo];
       waylandFrontend = true;
     };
-
   };
 
   environment.sessionVariables = {
@@ -108,7 +106,7 @@
         "Noto Color Emoji"
       ];
 
-      emoji = [ "Noto Color Emoji" ];
+      emoji = ["Noto Color Emoji"];
     };
   };
 
@@ -122,6 +120,9 @@
   };
 
   programs.firefox.enable = true;
+  programs.nix-ld = {
+    enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     nushell
@@ -155,6 +156,7 @@
     file
     which
     tree
+    gnutar
 
     # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
@@ -183,5 +185,4 @@
   #   enable = true;
   # };
   services.upower.enable = true;
-
 }

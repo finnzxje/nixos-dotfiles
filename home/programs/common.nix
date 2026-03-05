@@ -3,8 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.zen-browser.homeModules.beta
     # or inputs.zen-browser.homeModules.twilight
@@ -20,6 +19,7 @@
     jetbrains.idea
     vesktop
     imv
+    rar
 
     # zathura
     # calibre
@@ -41,7 +41,11 @@
     lazydocker
 
     arduino-ide
-    devenv
+    imagemagick
+    ghostscript
+
+    antigravity-fhs
+    nix-ld
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh

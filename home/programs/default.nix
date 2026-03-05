@@ -2,7 +2,7 @@
   imports = [
     ./tmux
     ./common.nix
-    # ./libreoffice
+    ./libreoffice
     ./gtk
     ./hypridle
     ./noctalia
@@ -13,5 +13,6 @@
     ./sioyek
     ./vesktop
     ./mpv
+    ./git
   ];
 }

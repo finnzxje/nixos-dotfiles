@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
@@ -34,44 +37,34 @@
             desc = "Open terminal at current dir";
           }
           {
-            on = [
-              "g"
-              "b"
-            ];
+            on = ["g" "b"];
             run = "cd ~/Downloads/books";
             desc = "Go ~/Downloads/books";
           }
           {
-            on = [
-              "g"
-              "o"
-            ];
+            on = ["g" "o"];
             run = "cd ~/documents/obsidian-vault/finn/";
             desc = "Go to Obsidian Vault";
           }
           {
-            on = [
-              "g"
-              "/"
-            ];
+            on = ["g" "/"];
             run = "cd /";
             desc = "Go to root directory";
           }
           {
-            on = [
-              "g"
-              "t"
-            ];
+            on = ["g" "t"];
             run = "cd ~/.local/share/Trash/files";
             desc = "Go to trash";
           }
           {
-            on = [
-              "g"
-              "w"
-            ];
+            on = ["g" "w"];
             run = "cd /mnt/windows";
             desc = "Go to windows";
+          }
+          {
+            on = ["g" "f"];
+            run = ''cd "${config.home.homeDirectory}/Downloads/torrents/Suits complete S01-S09 web 10bit ddp2 hevc-d3g/"'';
+            desc = "Watch Suits";
           }
           {
             on = "t";
@@ -85,7 +78,6 @@
           }
         ];
       };
-
     };
 
     plugins = {
@@ -115,5 +107,4 @@
       require("starship"):setup()
     '';
   };
-
 }
