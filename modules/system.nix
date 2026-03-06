@@ -144,6 +144,7 @@
     xz
     unzip
     p7zip
+    gnutar
 
     # Text processing
     gnugrep
@@ -156,7 +157,6 @@
     file
     which
     tree
-    gnutar
 
     # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

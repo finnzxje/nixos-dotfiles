@@ -22,7 +22,7 @@
     rar
 
     # zathura
-    # calibre
+    calibre
     foliate
     obsidian
     zotero
