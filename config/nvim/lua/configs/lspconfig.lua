@@ -19,6 +19,10 @@ return function()
 		settings = {
 			["harper-ls"] = {
 				userDictPath = harper_dict_path,
+				linters = {
+					SentenceCapitalization = false,
+					UseTitleCase = false,
+				},
 			},
 		},
 	})

@@ -42,6 +42,12 @@
             desc = "Go ~/Downloads/books";
           }
           {
+            on = ["g" "p"];
+            run = "cd ~/Pictures";
+            desc = "Go to ~/Pictures";
+          }
+
+          {
             on = ["g" "o"];
             run = "cd ~/documents/obsidian-vault/finn/";
             desc = "Go to Obsidian Vault";

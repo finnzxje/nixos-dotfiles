@@ -20,6 +20,7 @@
     vesktop
     imv
     rar
+    jq
 
     # zathura
     calibre
@@ -34,7 +35,7 @@
     typst
     pandoc
     pdfannots2json
-    opencode
+    # opencode
 
     localsend
     yt-dlp
@@ -46,6 +47,8 @@
 
     antigravity-fhs
     nix-ld
+    insomnia
+    poppler-utils
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh
