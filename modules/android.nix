@@ -4,12 +4,10 @@
   username,
   ...
 }:
-
-with lib;
-{
+with lib; {
   environment.systemPackages = with pkgs; [
     android-tools
-    jdk21
+    # jdk21
     qemu_kvm
     android-studio
   ];
@@ -33,7 +31,7 @@ with lib;
   '';
   # services.udev.packages = [ pkgs.android-udev-rules ];
 
-  users.groups.adbusers = { };
+  users.groups.adbusers = {};
 
   users.users.${username}.extraGroups = [
     "kvm"

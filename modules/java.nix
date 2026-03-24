@@ -5,4 +5,7 @@
     gradle
     spring-boot-cli
   ];
+  programs.java = {
+    enable = true;
+  };
 }
