@@ -79,6 +79,7 @@ in {
     isort
     jdt-language-server
     kulala-fmt
+    clang-tools
 
     # productivity
     btop

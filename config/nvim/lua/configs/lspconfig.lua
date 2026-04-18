@@ -53,4 +53,5 @@ return function()
 	vim.lsp.enable("ruff")
 	vim.lsp.enable("jdtls")
 	vim.lsp.enable("ts_ls")
+	vim.lsp.enable("clangd")
 end

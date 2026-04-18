@@ -583,5 +583,6 @@ animations {
 //     }
 // }
 spawn-at-startup "fcitx5"
+spawn-at-startup "easyeffects --gapplication-service"
 spawn-sh-at-startup "exec /home/finnzxje/nixos-dotfiles/scripts/niri-monitor-layout.sh"
 spawn-sh-at-startup "sleep 5 && qbittorrent --no-splash"

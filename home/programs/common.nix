@@ -48,6 +48,13 @@
     nix-ld
     insomnia
     poppler-utils
+
+    bubblewrap
+    cloudflared
+    doctl
+    redis
+    k6
+    awscli2
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh

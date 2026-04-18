@@ -27,16 +27,23 @@
   };
   users.defaultUserShell = pkgs.zsh;
 
-  nix.settings.trusted-users = [
-    "root"
-    "${username}"
-  ];
+  nix.settings = {
+    trusted-users = [
+      "root"
+      "${username}"
+    ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = [
+      "https://mirrors.ustc.edu.cn/nix-channels/store"
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+      "https://nix-community.cachix.org"
+    ];
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
+    builders-use-substitutes = true;
+  };
   # do garbage collection weekly to keep disk low
   nix.gc = {
     automatic = lib.mkDefault true;
@@ -85,6 +92,7 @@
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       newcomputermodern
+      font-awesome_6
 
       nerd-fonts.jetbrains-mono
     ];
@@ -159,6 +167,10 @@
     tree
 
     # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+    # audio control
+    pavucontrol
+    easyeffects
   ];
 
   services = {

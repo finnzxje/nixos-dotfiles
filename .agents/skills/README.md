@@ -1,12 +1,12 @@
 # Agent Skills
 
-This directory contains Agent Skills used to assist in the development of the CityVoice project. These skills encapsulate project-specific knowledge and operational specifications, and can be invoked directly in conversations.
+This directory contains Agent Skills used to assist in the development of the NixOS dotfiles repo. These skills encapsulate project-specific knowledge and operational specifications, and can be invoked directly in conversations.
 
 ## Skill List
 
 | Skill Name       | Functional Description                                                                    | Usage Scenarios                                     | Entry File                          |
 | ---------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------- |
-| `commit-message` | Generates a commit message conforming to the CityVoice project style based on git changes | Generating commit messages, writing commit messages | [SKILL.md](commit-message/SKILL.md) |
+| `commit-message` | Generates a commit message conforming to the NixOS dotfiles repo style based on git changes | Generating commit messages, writing commit messages | [SKILL.md](commit-message/SKILL.md) |
 
 ### Detailed Description
 
