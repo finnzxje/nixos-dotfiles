@@ -78,8 +78,10 @@ in {
     ruff
     isort
     jdt-language-server
+    lombok
     kulala-fmt
     clang-tools
+    marksman
 
     # productivity
     btop

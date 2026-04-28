@@ -55,6 +55,9 @@
     redis
     k6
     awscli2
+
+    zoom-us
+    stremio-linux-shell
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh
