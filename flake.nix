@@ -24,37 +24,33 @@
     };
   };
 
-  outputs =
-    inputs@{
-      self,
-      nixpkgs,
-      home-manager,
-      ...
-    }:
-    {
-      nixosConfigurations = {
-        shoukei =
-          let
-            username = "finnzxje";
-            specialArgs = { inherit username inputs; };
-          in
-          nixpkgs.lib.nixosSystem {
-            inherit specialArgs;
-            modules = [
-              ./hosts/shoukei
-              home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  users.${username} = import ./home;
-                  backupFileExtension = "backup";
-                  extraSpecialArgs = inputs // specialArgs;
-                };
-              }
-            ];
-          };
-      };
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
+    nixosConfigurations = {
+      shoukei = let
+        username = "finnzxje";
+        specialArgs = {inherit username inputs;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            ./hosts/shoukei
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./home;
+                backupFileExtension = "backup";
+                extraSpecialArgs = inputs // specialArgs;
+              };
+            }
+          ];
+        };
     };
-
+  };
 }

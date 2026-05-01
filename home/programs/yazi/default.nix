@@ -68,6 +68,12 @@
             desc = "Go to windows";
           }
           {
+            on = ["g" "l"];
+            run = "cd ~/documents/learning";
+            desc = "?";
+          }
+
+          {
             on = ["g" "f"];
             run = ''cd "${config.home.homeDirectory}/Downloads/torrents/Suits complete S01-S09 web 10bit ddp2 hevc-d3g/"'';
             desc = "Watch Suits";

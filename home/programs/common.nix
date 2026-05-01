@@ -58,6 +58,7 @@
 
     zoom-us
     stremio-linux-shell
+    tdl
   ];
 
   # imv keybindings have some problems with urob's HRMs so I use feh

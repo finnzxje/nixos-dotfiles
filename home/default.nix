@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   username,
   inputs,
@@ -32,6 +33,7 @@ in {
   xdg.configFile."nvim" = {
     source = create_symlink "${dotfiles}/nvim";
   };
+  xdg.configFile."nvim/init.lua".enable = lib.mkForce false;
 
   xdg.configFile."niri" = {
     source = create_symlink "${dotfiles}/niri";
